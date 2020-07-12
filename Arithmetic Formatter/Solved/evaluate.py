@@ -22,13 +22,14 @@ def evaluate(s:str)->str:
       return "Error: Numbers must only contain digits."
 
   # check if numbers are 4 digits  
-  if (t1>9999 or t2>9999):
+  if (t1>9999 or t1 < -9999 or t2>9999 or t2<-9999):
       return "Error: Numbers cannot be more than four digits."
   
   # addition  
   if t[1] == '+':
       res = t1 + t2
       return str(res)
+  
   # subtraction 
   elif t[1] == '-':
       res = t1 -t2
